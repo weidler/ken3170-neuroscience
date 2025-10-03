@@ -22,6 +22,6 @@ Consider this overview: [https://rsatoolbox.readthedocs.io/en/stable/comparing.h
 | D   | \[0.089, 0.992, -0.031, -0.067, -0.072\] | \[0.067, -0.087, 0.185, -0.157, -0.179, 0.122, 0.955\] | \[0.051, 0.99, -0.099, -0.016, 0.003, -0.067, -0.032, -0.003, -0.086\] |
 | E   | \[0.144, 0.975, -0.027, -0.061, -0.142\] | \[-0.13, -0.115, -0.076, -0.042, -0.094, -0.083, -0.979\] | \[0.077, 0.986, -0.094, -0.042, 0.013, -0.067, -0.036, -0.037, -0.097\] |
 
-### Part II: RSA for Real - Comparing Models and Data with the rsatoolbox
+### Part II and III: RSA for Real - Comparing Models and Data with the rsatoolbox
 
 The repository contains data and two Jupyter notebooks. Clone the repository, create a virtual environment, install the requirements, and then run through the notebooks.
