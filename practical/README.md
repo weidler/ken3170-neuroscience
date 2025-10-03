@@ -1,9 +1,9 @@
-# Computer Practical 5: Modeling in Neursocience (KEN3170)
+# Computer Practical 5: Modeling in Neuroscience (KEN3170)
 
 ### Part I: Diving deeper into RSA - By Hand
 
 You are given **two computational models** that produce internal representations of the same set of stimuli, alongside **reference data from the brain**. Use **Representational Similarity Analysis (RSA)** to evaluate which model better matches the structure of the brain data.  
-<br>
+
 **Reflect on the following**:
 
 1. How do we represent the responses of a model or the brain for each stimulus?
@@ -13,7 +13,6 @@ Consider this overview: [https://rsatoolbox.readthedocs.io/en/stable/distances.h
 4. How can you quantify the correspondence between a model’s RDM and the brain’s RDM?  
 Consider this overview: [https://rsatoolbox.readthedocs.io/en/stable/comparing.html](https://rsatoolbox.readthedocs.io/en/stable/comparing.html)  
 5. If one model correlates more strongly with the brain than the other, what does that imply?  
-<br>
 
 | Class | Model1 (len=5) | Model2 (len=7) | Brain (len=9) |
 | --- | --- | --- | --- |
