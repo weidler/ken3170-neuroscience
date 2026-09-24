@@ -1,4 +1,4 @@
-# Computer Practical 5: Modeling in Neuroscience (KEN3170)
+# Multiscale Modeling of Biological Systems: Neuroscience - Practical
 
 In this practical you will learn how we measure the alignment between to systems without relying on them to be of equal scale or
 dimensionality. Instead of directly comparing the internal representations of two systems, we can use RSA to evaluate how well the _representational geometries_ of the systems align. That is, instead of measuring the distance between concept representations across systems, we measure the similarity between the ways in which the systems differentiate between concepts.
@@ -19,15 +19,19 @@ To this end, go step by step through the process of RSA.
 
 1. For each system (i.e., model or brain) calculate the pairwise dissimilarities between classes within the system's representational space. Use the Euclidean distance to do that:
 
-   $$d(\mathbf{x}_i, \mathbf{x}_j) = \lVert \mathbf{x}_i - \mathbf{x}_j \rVert_2 = \sqrt{\sum_{k=1}^{n} (x_{i,k} - x_{j,k})^2}$$
+   ```math
+   d(\mathbf{x}_i, \mathbf{x}_j) = \lVert \mathbf{x}_i - \mathbf{x}_j \rVert_2 = \sqrt{\sum_{k=1}^{n} (x_{i,k} - x_{j,k})^2}
+   ```
 
-   where $\mathbf{x}_i$ and $\mathbf{x}_j$ are the representational vectors (activation patterns of brain or model) for classes $i$ and $j$ within one system, and $n$ is the dimensionality of that system's representational space. For every pair of classes this gives you the **Representational Dissimilarity Matrix (RDM)** of that system, $RDM \in \mathbb{R}^{5 \times 5}$, with entries $RDM_{ij} = d(\mathbf{x}_i, \mathbf{x}_j)$. Construct one RDM per system (Model1, Model2, and Brain), per hand.
+   where $`\mathbf{x}_i`$ and $`\mathbf{x}_j`$ are the representational vectors (activation patterns of brain or model) for classes $`i`$ and $`j`$ within one system, and $`n`$ is the dimensionality of that system's representational space. For every pair of classes this gives you the **Representational Dissimilarity Matrix (RDM)** of that system, $`RDM \in \mathbb{R}^{5 \times 5}`$, with entries $`RDM_{ij} = d(\mathbf{x}_i, \mathbf{x}_j)`$. Construct one RDM per system (Model1, Model2, and Brain), per hand.
 
-2. Calculate the similarity between the model RDMs and the brain RDM using the Pearson correlation coefficient. Since RDMs are symmetric with a zero diagonal, only compare the **upper (or lower) triangle, off-diagonal entries**. Let's call this vector of unique dissimilarities $\mathbf{v}$:
+2. Calculate the similarity between the model RDMs and the brain RDM using the Pearson correlation coefficient. Since RDMs are symmetric with a zero diagonal, only compare the **upper (or lower) triangle, off-diagonal entries**. Let's call this vector of unique dissimilarities $`\mathbf{v}`$:
 
-   $$r(RDM_A, RDM_B) = \frac{\sum_{k=1}^{m} (v_{A,k} - \bar{v}_A)(v_{B,k} - \bar{v}_B)}{\sqrt{\sum_{k=1}^{m} (v_{A,k} - \bar{v}_A)^2} \sqrt{\sum_{k=1}^{m} (v_{B,k} - \bar{v}_B)^2}}$$
+   ```math
+   r(RDM_A, RDM_B) = \frac{\sum_{k=1}^{m} (v_{A,k} - \bar{v}_A)(v_{B,k} - \bar{v}_B)}{\sqrt{\sum_{k=1}^{m} (v_{A,k} - \bar{v}_A)^2} \sqrt{\sum_{k=1}^{m} (v_{B,k} - \bar{v}_B)^2}}
+   ```
 
-   where $v_{A,k}$ and $v_{B,k}$ are the $k$-th entries of the vectorized upper triangles of $RDM_A$ and $RDM_B$, $\bar{v}_A$ and $\bar{v}_B$ their means, and $m$ the number of unique off-diagonal entries. This gives you one correlation value per model (so you should have Model1 vs. Brain and Model2 vs. Brain).
+   where $`v_{A,k}`$ and $`v_{B,k}`$ are the $`k`$-th entries of the vectorized upper triangles of $`RDM_A`$ and $`RDM_B`$, $`\bar{v}_A`$ and $`\bar{v}_B`$ their means, and $`m`$ the number of unique off-diagonal entries. This gives you one correlation value per model (so you should have Model1 vs. Brain and Model2 vs. Brain).
 
 3. Report which of the models is the better fit.
 
