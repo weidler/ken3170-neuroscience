@@ -61,7 +61,7 @@ the lecture. While you are free in your choices, some recommendations:
 
 ### The Report
 
-Write a ~1500 word report on your choices and results. This should at least contain
+Write a ~1500 word (more is fine but please dont overdo it) report on your choices and results. This should at least contain
 * A short introduction to the study
   * Data, purpose, models, ...
   * What kind of study type (normative/contrastive/constructive) you conducted here
