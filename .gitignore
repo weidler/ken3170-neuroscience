@@ -1,7 +1,8 @@
 practical/solutions.py
 practical/solutions_rdms.png
 practical/generate_test_data.py
-assignment/checkpoints/
+assignment/models/
+assignment/data/
 
 # uv (do not ignore uv.lock -- that should be committed for reproducible installs)
 .venv/
